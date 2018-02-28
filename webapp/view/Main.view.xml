@@ -1,0 +1,24 @@
+<mvc:View controllerName="bmt.training.viewmodel.controller.Main" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc"
+	displayBlock="true" xmlns="sap.m"
+	xmlns:f="sap.ui.layout.form">
+	<App>
+		<pages>
+			<Page title="{i18n>title}">
+				<content>
+					<f:SimpleForm>
+						<f:content>
+							<Label text="Fluggesellschaft"/>
+							<Input enabled="{VM>/EditMode}" />
+							<Label text="Flugverbindung"/>
+							<Input enabled="{VM>/EditMode}"/>
+							<Label text="Gender"/>
+							<Input enabled="{VM>/EditMode}"/>
+							<Button visible="{= ${VM>/EditMode} === false}" press="onPressEdit" text="Edit"></Button>
+							<Button visible="{VM>/EditMode}" press="onPressSave" text="Save"></Button>
+						</f:content>
+					</f:SimpleForm>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
